@@ -1,9 +1,16 @@
+
+```
+
+---
+
+## 3. booking.html
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Booking - KickKlinic</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
@@ -15,49 +22,149 @@ font-family:'Outfit',sans-serif;
 background:#eef4ff;
 }
 
+.glass{
+background:rgba(255,255,255,.7);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.4);
+}
+
 .input{
 width:100%;
-padding:18px;
-border-radius:20px;
+padding:20px 24px;
+border-radius:24px;
 border:1px solid #dbeafe;
+font-size:16px;
+background:white;
+outline:none;
 }
 </style>
 </head>
 
 <body>
 
-<nav class="flex justify-between items-center px-8 py-6 bg-white shadow-sm">
-<a href="index.html" class="text-4xl font-black text-blue-600">👟 KickKlinic</a>
-<a href="services.html" class="bg-blue-600 text-white px-7 py-3 rounded-full font-bold">Services</a>
+<nav class="flex justify-between items-center px-8 py-6 bg-white shadow-sm sticky top-0 z-50">
+
+<a href="index.html"
+class="text-4xl font-black text-blue-600">
+👟 KickKlinic
+</a>
+
+<div class="flex gap-5">
+<a href="services.html" class="bg-white border px-7 py-3 rounded-full font-bold">Services</a>
+<a href="index.html" class="bg-blue-600 text-white px-7 py-3 rounded-full font-bold">Home</a>
+</div>
+
 </nav>
 
-<section class="max-w-3xl mx-auto px-8 py-20">
+<section class="py-24 px-8">
 
-<h1 class="text-5xl font-black text-center mb-10">Book Your Cleaning</h1>
+<div class="max-w-4xl mx-auto">
 
-<form action="https://formspree.io/f/mjgzkoze" method="POST" class="space-y-6">
+<div class="glass rounded-[50px] p-10 md:p-16 shadow-2xl">
 
-<input class="input" name="name" placeholder="Your Name" required>
-<input class="input" name="email" placeholder="Your Email" required>
-<input class="input" name="shoe" placeholder="Shoe Model" required>
+<h2 class="text-5xl font-black text-center text-slate-900 mb-12">
+Book Your Cleaning
+</h2>
 
-<select class="input" name="service">
-<option>Basic - $0.50</option>
-<option>Essential - $1.00</option>
-<option>Luxury - $2.00</option>
-<option>Premium - $3.00</option>
-<option>Special Request</option>
+<form
+action="https://formspree.io/f/mjgzkoze"
+method="POST"
+enctype="multipart/form-data"
+class="space-y-8"
+>
+
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+required
+class="input"
+/>
+
+<input
+type="email"
+name="email"
+placeholder="Your Email"
+required
+class="input"
+/>
+
+<input
+type="text"
+name="shoe"
+placeholder="Shoe Brand / Model"
+required
+class="input"
+/>
+
+<select
+name="service"
+required
+class="input"
+>
+<option value="">Select Service</option>
+<option>Basic Service - $0.50</option>
+<option>Essential Service - $1.00</option>
+<option>Luxury Service - $2.00</option>
+<option>Premium Service - $3.00</option>
 </select>
 
-<textarea class="input" name="message" placeholder="Notes..." rows="5"></textarea>
+<input
+type="text"
+name="special_requests"
+placeholder="Special Requests"
+class="input"
+/>
 
-<button class="w-full bg-blue-600 text-white py-4 rounded-2xl font-bold">
-Submit Booking
+<textarea
+name="message"
+rows="6"
+placeholder="Describe your shoes or cleaning request..."
+class="input"
+></textarea>
+
+<div>
+<label class="block text-lg font-bold mb-4">
+Upload Shoe Photos
+</label>
+
+<input
+type="file"
+name="attachment"
+multiple
+class="input bg-white"
+/>
+</div>
+
+<button
+type="submit"
+class="w-full bg-gradient-to-r from-blue-600 to-sky-500 text-white py-5 rounded-2xl text-xl font-black shadow-2xl hover:scale-[1.02] transition duration-300"
+>
+Submit Booking Request →
 </button>
 
 </form>
+
+</div>
+
+</div>
 
 </section>
 
 </body>
 </html>
+```
+
+---
+
+## IMPORTANT
+
+Make sure your files are named EXACTLY:
+
+* index.html
+* services.html
+* booking.html
+
+All lowercase.
+
+Then upload all 3 files to the SAME GitHub Pages folder.
