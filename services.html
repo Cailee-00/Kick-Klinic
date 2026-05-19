@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Services - KickKlinic</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
@@ -17,49 +16,87 @@ background:#eef4ff;
 
 .card{
 background:white;
-border-radius:30px;
-padding:30px;
+border-radius:35px;
+padding:40px;
 box-shadow:0 20px 60px rgba(0,0,0,0.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
 }
 </style>
 </head>
 
 <body>
 
-<nav class="flex justify-between items-center px-8 py-6 bg-white shadow-sm">
-<a href="index.html" class="text-4xl font-black text-blue-600">👟 KickKlinic</a>
+<nav class="flex justify-between items-center px-8 py-6 bg-white shadow-sm sticky top-0 z-50">
 
+<a href="index.html"
+class="text-4xl font-black text-blue-600">
+👟 KickKlinic
+</a>
+
+<div class="flex gap-5">
+<a href="index.html" class="bg-white border px-7 py-3 rounded-full font-bold">Home</a>
 <a href="booking.html" class="bg-blue-600 text-white px-7 py-3 rounded-full font-bold">Booking</a>
+</div>
+
 </nav>
 
-<section class="max-w-6xl mx-auto px-8 py-20">
+<section class="py-24 px-8">
 
-<h1 class="text-5xl font-black text-center mb-12">Our Services</h1>
+<div class="max-w-7xl mx-auto">
 
-<div class="grid md:grid-cols-2 gap-8">
+<h1 class="text-6xl font-black text-center text-slate-900 mb-6">
+Our Services
+</h1>
+
+<p class="text-center text-slate-600 text-lg max-w-2xl mx-auto mb-20">
+Choose the perfect cleaning package for your sneakers.
+</p>
+
+<div class="grid md:grid-cols-2 gap-10">
 
 <div class="card">
-<h2 class="text-2xl font-black">Basic Service</h2>
-<p class="text-slate-600 mt-2">Cleans the outsole for no dirt and bright shine.</p>
-<p class="mt-4 font-bold text-blue-600">$0.50</p>
+<h2 class="text-3xl font-black text-blue-600">Basic Service</h2>
+<p class="mt-5 text-slate-600 leading-relaxed">
+Light exterior cleaning for everyday dirt and dust.
+</p>
+<p class="mt-8 text-4xl font-black">$0.50</p>
 </div>
 
 <div class="card">
-<h2 class="text-2xl font-black">Essential Service</h2>
-<p class="text-slate-600 mt-2">Cleans the top of the shoe and brightens it.</p>
-<p class="mt-4 font-bold text-blue-600">$1.00</p>
+<h2 class="text-3xl font-black text-blue-600">Essential Service</h2>
+<p class="mt-5 text-slate-600 leading-relaxed">
+Deeper cleaning for tougher dirt and stains.
+</p>
+<p class="mt-8 text-4xl font-black">$1.00</p>
 </div>
 
 <div class="card">
-<h2 class="text-2xl font-black">Luxury Service</h2>
-<p class="text-slate-600 mt-2">The full outside of the shoe aand gets it squeaky clean.</p>
-<p class="mt-4 font-bold text-blue-600">$2.00</p>
+<h2 class="text-3xl font-black text-blue-600">Luxury Service</h2>
+<p class="mt-5 text-slate-600 leading-relaxed">
+Full deep clean with advanced stain treatment.
+</p>
+<p class="mt-8 text-4xl font-black">$2.00</p>
 </div>
 
 <div class="card">
-<h2 class="text-2xl font-black">Premium Service</h2>
-<p class="text-slate-600 mt-2">The full outside + inside for deodorizing.</p>
-<p class="mt-4 font-bold text-blue-600">$3.00</p>
+<h2 class="text-3xl font-black text-blue-600">Premium Service</h2>
+<p class="mt-5 text-slate-600 leading-relaxed">
+Complete sneaker restoration and premium care package.
+</p>
+<p class="mt-8 text-4xl font-black">$3.00</p>
+</div>
+
+</div>
+
+<div class="text-center mt-20">
+<a href="booking.html"
+class="bg-gradient-to-r from-blue-600 to-sky-500 text-white px-12 py-5 rounded-2xl text-xl font-black shadow-2xl hover:scale-105 transition duration-300 inline-block">
+Book Your Cleaning
+</a>
 </div>
 
 </div>
