@@ -377,15 +377,29 @@
 
       <form id="kick-form" enctype="multipart/form-data" class="space-y-6">
 
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          required
-          data-fs-field
-          class="w-full p-5 rounded-2xl border border-slate-200 bg-white"
-        />
+        <!-- NAME + SPECIAL REQUESTS -->
+        <div class="grid md:grid-cols-2 gap-6">
 
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            data-fs-field
+            class="w-full p-5 rounded-2xl border border-slate-200 bg-white"
+          />
+
+          <input
+            type="text"
+            name="special_request_type"
+            placeholder="Special Requests (Laces, Tongue, Deep Clean, Dog Poop, Tough Stains, Special Scents)"
+            data-fs-field
+            class="w-full p-5 rounded-2xl border border-slate-200 bg-white"
+          />
+
+        </div>
+
+        <!-- EMAIL -->
         <input
           type="email"
           name="email"
@@ -395,6 +409,7 @@
           class="w-full p-5 rounded-2xl border border-slate-200 bg-white"
         />
 
+        <!-- SHOE -->
         <input
           type="text"
           name="shoe"
@@ -404,6 +419,7 @@
           class="w-full p-5 rounded-2xl border border-slate-200 bg-white"
         />
 
+        <!-- SERVICE -->
         <select
           name="service"
           required
@@ -437,11 +453,11 @@
 
         </select>
 
-        <!-- SPECIAL REQUESTS -->
+        <!-- DESCRIPTION -->
         <textarea
           name="special_requests"
           rows="7"
-          placeholder="Special Requests (Examples: Laces, Tongue Cleaning, Deep Clean, Dog Poop Removal, Tough Stains, Special Scents, Deodorizing, Suede Care, Whitening Soles...)"
+          placeholder="Describe your shoes or request..."
           data-fs-field
           class="w-full p-5 rounded-2xl border border-slate-200 bg-white"
         ></textarea>
