@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>KickKlinic | Premium Shoe Cleaning</title>
+<title>KickKlinic</title>
 
-<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Google Font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -17,24 +15,22 @@
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
 body{
 font-family:'Outfit',sans-serif;
 background:#eef4ff;
 overflow-x:hidden;
-color:#111827;
 }
 
-/* Background glow circles */
+.glass{
+background:rgba(255,255,255,.65);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.4);
+}
+
+.hero-bg{
+background:
+radial-gradient(circle at top left,#ffffff 0%,#edf4ff 40%,#dbeafe 100%);
+}
 
 .blur-circle{
 position:absolute;
@@ -42,69 +38,6 @@ border-radius:9999px;
 filter:blur(90px);
 opacity:.45;
 pointer-events:none;
-}
-
-/* Hero gradient */
-
-.hero-bg{
-background:
-radial-gradient(circle at top left,#ffffff 0%,#edf4ff 40%,#dbeafe 100%);
-}
-
-/* Glass effect */
-
-.glass{
-background:rgba(255,255,255,.65);
-backdrop-filter:blur(20px);
-border:1px solid rgba(255,255,255,.5);
-}
-
-/* Inputs */
-
-.input{
-width:100%;
-padding:20px 24px;
-border-radius:24px;
-border:1px solid #dbeafe;
-font-size:16px;
-background:white;
-outline:none;
-transition:.25s;
-}
-
-.input:focus{
-border-color:#2563eb;
-box-shadow:0 0 0 4px rgba(37,99,235,.15);
-}
-
-/* Service cards */
-
-.service-card{
-transition:.3s;
-}
-
-.service-card:hover{
-transform:translateY(-8px);
-box-shadow:0 25px 50px rgba(37,99,235,.12);
-}
-
-/* Mobile fixes */
-
-@media(max-width:900px){
-
-.hero-grid{
-grid-template-columns:1fr !important;
-}
-
-.hero-title{
-font-size:54px !important;
-line-height:1 !important;
-}
-
-.hero-card{
-padding:40px 28px !important;
-}
-
 }
 
 </style>
@@ -115,27 +48,27 @@ padding:40px 28px !important;
 <!-- TOP BAR -->
 
 <div class="bg-gradient-to-r from-blue-600 to-sky-500 text-white text-center py-3 text-xs font-bold tracking-[4px] uppercase">
-✨ Premium Footwear Care & Deep Cleaning Specialists ✨
+✨ Premium Footwear Care ✨
 </div>
 
 <!-- NAV -->
 
 <nav class="flex justify-between items-center px-8 py-6 bg-white/80 backdrop-blur-xl sticky top-0 z-50">
 
-<h1 class="text-4xl md:text-5xl font-black text-blue-600 tracking-tight">
+<h1 class="text-4xl md:text-5xl font-black text-blue-600">
 👟 KickKlinic
 </h1>
 
-<div class="flex items-center gap-6">
+<div class="flex gap-5">
 
-<a href="#services"
-class="font-bold text-slate-800 hover:text-blue-600 transition">
+<a href="services.html"
+class="bg-white border border-slate-200 px-7 py-3 rounded-full font-bold hover:bg-slate-100 transition">
 Services
 </a>
 
-<a href="#booking"
-class="bg-gradient-to-r from-blue-600 to-sky-500 text-white px-8 py-4 rounded-full font-bold shadow-2xl hover:scale-105 transition">
-Book Now →
+<a href="booking.html"
+class="bg-gradient-to-r from-blue-600 to-sky-500 text-white px-7 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition">
+Booking
 </a>
 
 </div>
@@ -144,65 +77,57 @@ Book Now →
 
 <!-- HERO -->
 
-<section class="hero-bg relative overflow-hidden">
-
-<!-- Background circles -->
+<section class="hero-bg relative overflow-hidden min-h-screen flex items-center">
 
 <div class="blur-circle w-96 h-96 bg-blue-300 top-0 left-0"></div>
-
 <div class="blur-circle w-[500px] h-[500px] bg-sky-200 bottom-0 right-0"></div>
 
 <div class="max-w-7xl mx-auto px-8 py-24 relative z-10">
 
-<div class="hero-grid grid lg:grid-cols-2 gap-16 items-center">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
 
-<!-- LEFT SIDE -->
+<!-- LEFT -->
 
 <div>
 
-<div class="glass hero-card rounded-[50px] p-10 md:p-14 shadow-2xl">
+<div class="glass rounded-[50px] p-10 md:p-14 shadow-2xl">
 
-<h2 class="hero-title text-5xl md:text-7xl font-black leading-[0.95] text-slate-900">
+<h2 class="text-5xl md:text-7xl font-black leading-[0.95] text-slate-900">
 
-We scrub away the past so you can
-
-<span class="block mt-4 bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">
-confidently chase your future.
+KEEP YOUR
+<span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-400">
+KICKS CRISP
 </span>
 
 </h2>
 
-<div class="w-32 h-2 rounded-full bg-gradient-to-r from-blue-600 to-sky-400 mt-8"></div>
-
 <p class="mt-8 text-lg text-slate-600 leading-relaxed">
-Professional sneaker cleaning and restoration for dirty shoes, deep cleans, odors, tough stains, and specialty requests.
+Professional sneaker cleaning and restoration for dirty shoes, tough stains, odors, and deep cleans.
 </p>
 
 <div class="flex flex-wrap gap-4 mt-10">
 
-<a href="#booking"
+<a href="services.html"
 class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold shadow-xl hover:scale-105 transition">
-Book Cleaning
-</a>
-
-<a href="#services"
-class="bg-white text-slate-800 px-8 py-4 rounded-2xl font-bold border border-slate-200 hover:bg-slate-100 transition">
 View Services
 </a>
 
-</div>
+<a href="booking.html"
+class="bg-white text-slate-800 px-8 py-4 rounded-2xl font-bold border border-slate-200 hover:bg-slate-100 transition">
+Book Cleaning
+</a>
 
 </div>
 
 </div>
 
-<!-- RIGHT SIDE -->
+</div>
+
+<!-- RIGHT -->
 
 <div class="relative flex justify-center items-center">
 
 <div class="absolute inset-0 bg-blue-400/10 blur-3xl rounded-full"></div>
-
-<div class="relative z-10 flex items-center justify-center w-full">
 
 <img
 src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80"
@@ -216,254 +141,7 @@ class="w-full max-w-[650px] rounded-[40px] object-cover shadow-2xl"
 
 </div>
 
-</div>
-
 </section>
-
-<!-- SERVICES -->
-
-<section id="services" class="py-24 px-8">
-
-<div class="max-w-6xl mx-auto">
-
-<div class="text-center mb-16">
-
-<h2 class="text-5xl font-black text-slate-900">
-Cleaning Services
-</h2>
-
-<p class="text-slate-500 mt-4 text-lg">
-Choose the perfect clean for your sneakers.
-</p>
-
-</div>
-
-<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
-
-<!-- BASIC -->
-
-<div class="service-card glass rounded-[35px] p-8">
-
-<div class="text-5xl mb-6">✨</div>
-
-<h3 class="text-2xl font-black">
-Basic
-</h3>
-
-<p class="text-slate-600 mt-4">
-Outsole cleaning and shine.
-</p>
-
-<div class="mt-6 text-4xl font-black text-blue-600">
-$0.50
-</div>
-
-</div>
-
-<!-- ESSENTIAL -->
-
-<div class="service-card glass rounded-[35px] p-8">
-
-<div class="text-5xl mb-6">🧼</div>
-
-<h3 class="text-2xl font-black">
-Essential
-</h3>
-
-<p class="text-slate-600 mt-4">
-Upper sneaker scrub and refresh.
-</p>
-
-<div class="mt-6 text-4xl font-black text-blue-600">
-$1.00
-</div>
-
-</div>
-
-<!-- LUXURY -->
-
-<div class="service-card glass rounded-[35px] p-8">
-
-<div class="text-5xl mb-6">👟</div>
-
-<h3 class="text-2xl font-black">
-Luxury
-</h3>
-
-<p class="text-slate-600 mt-4">
-Full exterior sneaker cleaning.
-</p>
-
-<div class="mt-6 text-4xl font-black text-blue-600">
-$2.00
-</div>
-
-</div>
-
-<!-- PREMIUM -->
-
-<div class="service-card glass rounded-[35px] p-8">
-
-<div class="text-5xl mb-6">💎</div>
-
-<h3 class="text-2xl font-black">
-Premium
-</h3>
-
-<p class="text-slate-600 mt-4">
-Inside cleaning and deodorizing.
-</p>
-
-<div class="mt-6 text-4xl font-black text-blue-600">
-$3.00
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- BOOKING -->
-
-<section id="booking" class="py-24 px-8">
-
-<div class="max-w-4xl mx-auto">
-
-<div class="glass rounded-[50px] p-10 md:p-16 shadow-2xl">
-
-<h2 class="text-5xl font-black text-center text-slate-900 mb-12">
-Book Your Cleaning
-</h2>
-
-<form
-action="https://formspree.io/f/mjgzkoze"
-method="POST"
-enctype="multipart/form-data"
-class="space-y-8"
->
-
-<!-- NAME -->
-
-<input
-type="text"
-name="name"
-placeholder="Your Name"
-required
-class="input"
-/>
-
-<!-- EMAIL -->
-
-<input
-type="email"
-name="email"
-placeholder="Your Email"
-required
-class="input"
-/>
-
-<!-- SHOE -->
-
-<input
-type="text"
-name="shoe"
-placeholder="Shoe Brand / Model"
-required
-class="input"
-/>
-
-<!-- SERVICE -->
-
-<select
-name="service"
-required
-class="input"
->
-
-<option value="">Select Service</option>
-
-<option>Basic Service - $0.50</option>
-
-<option>Essential Service - $1.00</option>
-
-<option>Luxury Service - $2.00</option>
-
-<option>Premium Service - $3.00</option>
-
-</select>
-
-<!-- SPECIAL REQUESTS -->
-
-<input
-type="text"
-name="special_requests"
-placeholder="Special Requests (Laces, Tongue, Deep Clean, Dog Poop, Tough Stains, Special Scents)"
-class="input"
-/>
-
-<!-- MESSAGE -->
-
-<textarea
-name="message"
-rows="6"
-placeholder="Describe your shoes or cleaning request..."
-class="input"
-></textarea>
-
-<!-- FILE UPLOAD -->
-
-<div>
-
-<label class="block text-lg font-bold mb-4">
-Upload Shoe Photos
-</label>
-
-<input
-type="file"
-name="attachment"
-multiple
-class="input bg-white"
-/>
-
-</div>
-
-<!-- BUTTON -->
-
-<button
-type="submit"
-class="w-full bg-gradient-to-r from-blue-600 to-sky-500 text-white py-5 rounded-2xl text-xl font-black shadow-2xl hover:scale-[1.02] transition"
->
-Submit Booking Request →
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer class="py-16 text-center text-slate-500">
-
-<h3 class="text-4xl font-black text-blue-600">
-KickKlinic
-</h3>
-
-<p class="mt-4">
-Premium Sneaker Cleaning & Restoration
-</p>
-
-<p class="mt-2 text-sm">
-© 2026 KickKlinic. All rights reserved.
-</p>
-
-</footer>
 
 </body>
 </html>
